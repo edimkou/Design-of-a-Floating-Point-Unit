@@ -24,6 +24,7 @@ However, besides the Verilog source code I define the design constraints specify
 
 ## Step 4
 In this step I add some functionality to the previous step. The main perpuse of this stage is the ability for multiple inputs to the FP Adder and in order to achive that I wrote a Data Memory module in which are instantiated with the input values of my choice. The Data Memory is being read each time the user pressed a Zedboard button. If the user preeses rst an internal read pointer ptr of the Data Memory will move to the beggining, otherwise, it will move to the next entry Mem[ptr] and will provide the corresponding two input FP32 numbers to the FP adder. Also, I construct a module that receives a multi-cycle pulse signal (preesed button) as input and generates a single-cycle pulse signal as output that is stable for 0,1sec, if the input signal changes sooner than o,1secs I assume that it was mechanical noise (debouncing mechanism).    
-  In the figure below is shown the additional hardware of step 4.  
+  
+In the figure below is shown the additional hardware of step 4.  
 ![image](https://user-images.githubusercontent.com/77272704/233723266-3c3b2046-7c39-4c0f-957c-f060237c144f.png)
   
