@@ -1,5 +1,12 @@
 `timescale 1ns / 1ps
-
+//////////////////////////////////////////////////
+// Author: Dimkou Eleni
+// Company: UTH
+// Design Name: FPAdder-fpga_mem
+// Module Name:  fpga_system
+// Project Name: Floating Point Adder
+// Target Devices: Zedboard 
+//////////////////////////////////////////////////
 
 module fpadd_system (input clk,
                      input rst,
@@ -13,7 +20,7 @@ module fpadd_system (input clk,
    wire start_execute;
    wire [31:0]InpA, InpB;
 
-    Debouncer Debouncer(clk, rst, en, start_execute);
+    Debouncer_L2P Debouncer_L2P(clk, rst, en, start_execute);
 
     DataMemory Mem(clk, rst, start_execute, InpA, InpB);
 
@@ -24,7 +31,6 @@ module fpadd_system (input clk,
 
    // Instantiate the 7segment display output 1
    SevenSegDisplay SevenSegDisplay1(clk, rst, fp_out[23:16], a_to_g1);
-
 
     assign leds = fp_out[7:0];
 
