@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
+// Author: Dimkou Eleni
 // Company: UTH
-// 
-// Design Name: 
-// Module Name:   fpadd_single 
+// Design Name: FPAdder
+// Module Name:   fpadd_pipe 
 // Project Name: 32 bit Floating Point Unit - Add
 // Target Devices: Zedboard
 // Tool versions: Vivado 2020.2
@@ -30,8 +30,7 @@ module Fpadd_pipe (input clk,
 	reg [23:0]sub_mantissas_pp;
 	wire add_flag, sub_flag, sign_result;
 	reg add, sub, sign_out;
-
-				     	
+     	
 	always @ (posedge clk)
 		begin
 			A <= reg_A;
