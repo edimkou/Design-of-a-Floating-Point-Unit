@@ -1,5 +1,4 @@
 // Each line contains  a 3*32-bit entry containing three float numbers: input A, input B, and the correct out.
-// Feel free to add your own entries
 @0 3f800000_40000000_40400000    //  1.0 + 2.0 = 3.0 
 @1 bf800000_3f800000_00000000    // -1.0 + 1.0 = 0.0
 @2 c2de8000_45155e00_450e6a00    //  -111.25 + 2389.875 = 2278.625
