@@ -1,5 +1,17 @@
 `timescale 1ns / 1ps
-// Verilog code for button debouncing on FPGA
+//////////////////////////////////////////////////////////////////////////////////
+// Author: Dimkou Eleni
+// Company: UTH
+// Design Name: FPAdder
+// Module Name:   Debounder_L2P 
+// Project Name: 32 bit Floating Point Unit - Add
+// Target Devices: Zedboard
+// Tool versions: Vivado 2020.2
+//
+// Description: 
+// This module purse multi-cycle pulse signal (pressed button) to a single-cycle pulse signal.
+// If the input signal changes sooner than 0,1secs I assume that it was mechanical noise, debouncing mechanism.
+//////////////////////////////////////////////////////////////////////////////////
 
 module Debouncer_L2P(input clk, input rst, input button, output output_signal);
  reg [23:0] cycle_counter;
